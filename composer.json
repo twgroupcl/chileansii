@@ -1,0 +1,54 @@
+{
+    "name": "twgroupcl/chileansii",
+    "description": "Provides an quick scaffolding with chilean SII Activities",
+    "keywords": [
+        "twgroupcl",
+        "chileansii"
+    ],
+    "homepage": "https://github.com/twgroupcl/chileansii",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "TWGroup",
+            "email": "hola@twgroup.cl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Twgroupcl\\Chileansii\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Twgroupcl\\Chileansii\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Twgroupcl\\Chileansii\\ChileansiiServiceProvider"
+            ],
+            "aliases": {
+                "Chileansii": "Twgroupcl\\Chileansii\\ChileansiiFacade"
+            }
+        }
+    }
+}
